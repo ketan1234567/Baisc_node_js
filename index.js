@@ -11,6 +11,12 @@ const app = express();
 const userRoutes = require("./routes/userRoutes");
 
 
+app.use("/users",userRoutes)
+app.use(express.static("Public"));
+
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
+});
 //console.log(userRoutes);
 
 
