@@ -7,12 +7,17 @@ const buffer = Buffer.from("Hello");
 
 const app = express();
 
+//const userRoutes = require("./routes/userRoutes");
 
-const userRoutes = require("./routes/userRoutes");
 
 
-app.use("/users",userRoutes)
-app.use(express.static("Public"));
+
+const productRoutes = require("./routes/productRoutes");
+
+
+//app.use("/users",userRoutes)
+app.use("/products",productRoutes)
+// app.use(express.static("Public"));
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
@@ -43,7 +48,7 @@ app.listen(3000, () => {
 
 
 
-app.use("/users", userRoutes);
+//app.use("/users", userRoutes);
 
 
 
